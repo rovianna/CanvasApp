@@ -13,7 +13,7 @@ class GeometryFactory {
         switch form {
         case .circle: return Circle(positionX: positionX, positionY: positionY)
         case .square: return Square(positionX: positionX, positionY: positionY)
-        case .triangle: return Triangle(positionX: positionX, positionY: positionY)
+        case .triangle: return Triangle(positionX: positionX, positionY: position)
         }
     }
 }

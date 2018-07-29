@@ -11,6 +11,9 @@ import CoreGraphics
 
 class CanvasViewController: UIViewController {
     
+    var formPicker: Form = .circle
+    
+    @IBOutlet weak var geometryView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +23,13 @@ class CanvasViewController: UIViewController {
         geometricFormImageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
         geometricFormImageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
         geometricFormImageView.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func geometryFormPickerAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: formPicker = .circle
+        case 1: formPicker = .square
+        default: formPicker = .triangle
+        }
     }
 }
