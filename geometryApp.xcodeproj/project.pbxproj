@@ -13,7 +13,6 @@
 		491434D8210D325F00AD46B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491434D6210D325F00AD46B5 /* LaunchScreen.storyboard */; };
 		491434E2210D333D00AD46B5 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434E1210D333D00AD46B5 /* CanvasViewController.swift */; };
 		491434E4210D345500AD46B5 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434E3210D345500AD46B5 /* Geometry.swift */; };
-		491434E7210DFB6C00AD46B5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434E6210DFB6C00AD46B5 /* CustomView.swift */; };
 		491434EB210E454800AD46B5 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434EA210E454800AD46B5 /* DraggableImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		491434D9210D325F00AD46B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491434E1210D333D00AD46B5 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		491434E3210D345500AD46B5 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
-		491434E6210DFB6C00AD46B5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		491434EA210E454800AD46B5 /* DraggableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,6 @@
 		491434E5210DFAF500AD46B5 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
-				491434E6210DFB6C00AD46B5 /* CustomView.swift */,
 				491434EA210E454800AD46B5 /* DraggableImageView.swift */,
 			);
 			path = "Custom View";
@@ -170,7 +167,6 @@
 			files = (
 				491434E2210D333D00AD46B5 /* CanvasViewController.swift in Sources */,
 				491434EB210E454800AD46B5 /* DraggableImageView.swift in Sources */,
-				491434E7210DFB6C00AD46B5 /* CustomView.swift in Sources */,
 				491434E4210D345500AD46B5 /* Geometry.swift in Sources */,
 				491434CE210D325D00AD46B5 /* AppDelegate.swift in Sources */,
 			);
