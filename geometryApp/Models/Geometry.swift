@@ -8,32 +8,14 @@
 
 import UIKit
 
-class Geometry {
-    var height: Int
-    var width: Int
-    
-    var radius: Int {
-        return height * width
-    }
-    
-    init(height: Int, width: Int) {
-        self.height = height
-        self.width = width
-    }
+protocol Geometry {
+    var positionX: Int { get set }
+    var positionY: Int { get set }
+    var object: Form { get }
 }
 
-class Square {
-    var geometry: Geometry
-    
-    init(geometry: Geometry) {
-        self.geometry = geometry
-    }
-}
-
-class Circle {
-    var geometry: Geometry
-    
-    init(geometry: Geometry) {
-        self.geometry = geometry
-    }
+enum Form {
+    case circle
+    case square
+    case triangle
 }

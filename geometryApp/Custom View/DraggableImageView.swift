@@ -18,6 +18,7 @@ class DraggableImageView: UIImageView {
         self.isUserInteractionEnabled = true
         
         addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector((handlePan(_:)))))
+        addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:))))
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowRadius = 2
@@ -25,6 +26,10 @@ class DraggableImageView: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init coder has not been implemented")
+    }
+    
+    @objc func handlePinch(_ sender: UIPinchGestureRecognizer) {
+        self.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
     
     @objc func handlePan(_ nizer: UIPanGestureRecognizer!) {

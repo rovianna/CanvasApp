@@ -14,6 +14,10 @@
 		491434E2210D333D00AD46B5 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434E1210D333D00AD46B5 /* CanvasViewController.swift */; };
 		491434E4210D345500AD46B5 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434E3210D345500AD46B5 /* Geometry.swift */; };
 		491434EB210E454800AD46B5 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434EA210E454800AD46B5 /* DraggableImageView.swift */; };
+		491434ED210E4C6800AD46B5 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434EC210E4C6800AD46B5 /* Circle.swift */; };
+		491434EF210E4CD600AD46B5 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434EE210E4CD600AD46B5 /* Square.swift */; };
+		491434F1210E4DA700AD46B5 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434F0210E4DA700AD46B5 /* Triangle.swift */; };
+		491434F3210E4DEF00AD46B5 /* GeometryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434F2210E4DEF00AD46B5 /* GeometryFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		491434E1210D333D00AD46B5 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		491434E3210D345500AD46B5 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		491434EA210E454800AD46B5 /* DraggableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		491434EC210E4C6800AD46B5 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		491434EE210E4CD600AD46B5 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		491434F0210E4DA700AD46B5 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		491434F2210E4DEF00AD46B5 /* GeometryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				491434E3210D345500AD46B5 /* Geometry.swift */,
+				491434EC210E4C6800AD46B5 /* Circle.swift */,
+				491434EE210E4CD600AD46B5 /* Square.swift */,
+				491434F0210E4DA700AD46B5 /* Triangle.swift */,
+				491434F2210E4DEF00AD46B5 /* GeometryFactory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491434EF210E4CD600AD46B5 /* Square.swift in Sources */,
+				491434ED210E4C6800AD46B5 /* Circle.swift in Sources */,
 				491434E2210D333D00AD46B5 /* CanvasViewController.swift in Sources */,
 				491434EB210E454800AD46B5 /* DraggableImageView.swift in Sources */,
+				491434F3210E4DEF00AD46B5 /* GeometryFactory.swift in Sources */,
 				491434E4210D345500AD46B5 /* Geometry.swift in Sources */,
+				491434F1210E4DA700AD46B5 /* Triangle.swift in Sources */,
 				491434CE210D325D00AD46B5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
