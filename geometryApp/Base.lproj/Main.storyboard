@@ -70,6 +70,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Md-im-e7Q">
                                                 <rect key="frame" x="125" y="0.0" width="61" height="30"/>
                                                 <state key="normal" title="Lixo"/>
+                                                <connections>
+                                                    <action selector="removeLastImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1z-Lu-Wew"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB4-A3-fir">
                                                 <rect key="frame" x="250" y="0.0" width="61" height="30"/>

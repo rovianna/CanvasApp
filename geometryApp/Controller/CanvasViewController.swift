@@ -12,6 +12,7 @@ import CoreGraphics
 class CanvasViewController: UIViewController {
     
     var formPicker: Form = .circle
+    var currentImage = [DraggableImageView]()
     
     @IBOutlet weak var geometryView: UIView!
     
@@ -33,9 +34,17 @@ class CanvasViewController: UIViewController {
             let image = DraggableImageView(image: geometry.image)
             image.frame = CGRect(x: geometry.positionX, y: geometry.positionY, width: 128, height: 128
             )
+            currentImage.append(image)
             geometryView.addSubview(image)
         }
     }
+    
+    @IBAction func removeLastImageAction(_ sender: UIButton) {
+        if !currentImage.isEmpty {
+        currentImage.removeLast()
+        }
+    }
+    
     
     @IBAction func geometryFormPickerAction(_ sender: UIButton) {
         switch sender.tag {
