@@ -10,13 +10,13 @@ import UIKit
 
 class Triangle: Geometry {
     var positionX: CGFloat
-    
     var positionY: CGFloat
-    
+    var image: UIImage
     var object: Form = .triangle
     
-    init(positionX: CGFloat, positionY: CGFloat) {
+    init(positionX: CGFloat, positionY: CGFloat, image: UIImage) {
         self.positionX = positionX
         self.positionY = positionY
+        self.image = image
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 protocol Geometry {
     var positionX: CGFloat { get set }
     var positionY: CGFloat { get set }
+    var image: UIImage { get set }
     var object: Form { get }
 }
 

@@ -17,19 +17,24 @@ class CanvasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let geometricFormImageView = DraggableImageView(image: #imageLiteral(resourceName: "smiling-emoticon-square-face"))
-        view.addSubview(geometricFormImageView)
-        geometricFormImageView.translatesAutoresizingMaskIntoConstraints = false
-        geometricFormImageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
-        geometricFormImageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
-        geometricFormImageView.isUserInteractionEnabled = true
-        
         geometryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onClickShowFormAction(_:))))
     }
     
     @objc func onClickShowFormAction(_ sender: UITapGestureRecognizer) {
         let position = sender.location(ofTouch: 0, in: geometryView)
+        var geometry: Geometry?
+        switch formPicker {
+        case .circle: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "smiling-emoticon-square-face"))
+        case .square: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "icon"))
+        case .triangle: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "triangle"))
+        }
         
+        if let geometry = geometry {
+            let image = DraggableImageView(image: geometry.image)
+            image.frame = CGRect(x: geometry.positionX, y: geometry.positionY, width: 128, height: 128
+            )
+            geometryView.addSubview(image)
+        }
     }
     
     @IBAction func geometryFormPickerAction(_ sender: UIButton) {

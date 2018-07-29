@@ -11,10 +11,12 @@ import UIKit
 class Circle: Geometry {
     var positionX: CGFloat
     var positionY: CGFloat
+    var image: UIImage
     var object: Form = .circle
     
-    init(positionX: CGFloat, positionY: CGFloat) {
+    init(positionX: CGFloat, positionY: CGFloat, image: UIImage) {
         self.positionX = positionX
         self.positionY = positionY
+        self.image = image
     }
 }

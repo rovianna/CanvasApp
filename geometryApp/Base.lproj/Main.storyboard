@@ -34,10 +34,16 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebu-0y-A1Y">
                                                 <rect key="frame" x="117" y="0.0" width="69" height="10"/>
                                                 <state key="normal" title="Quadrado"/>
+                                                <connections>
+                                                    <action selector="geometryFormPickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBC-WO-yIg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-Sl-PL4">
                                                 <rect key="frame" x="234" y="0.0" width="69" height="10"/>
                                                 <state key="normal" title="Triângulo"/>
+                                                <connections>
+                                                    <action selector="geometryFormPickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ks4-Nd-atB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
