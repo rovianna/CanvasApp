@@ -23,6 +23,13 @@ class CanvasViewController: UIViewController {
         geometricFormImageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
         geometricFormImageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
         geometricFormImageView.isUserInteractionEnabled = true
+        
+        geometryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onClickShowFormAction(_:))))
+    }
+    
+    @objc func onClickShowFormAction(_ sender: UITapGestureRecognizer) {
+        let position = sender.location(ofTouch: 0, in: geometryView)
+        
     }
     
     @IBAction func geometryFormPickerAction(_ sender: UIButton) {

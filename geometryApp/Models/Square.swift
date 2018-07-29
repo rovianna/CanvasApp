@@ -9,13 +9,13 @@
 import UIKit
 
 class Square: Geometry {
-    var positionX: Int
+    var positionX: CGFloat
     
-    var positionY: Int
+    var positionY: CGFloat
     
     var object: Form = .square
     
-    init(positionX: Int, positionY: Int) {
+    init(positionX: CGFloat, positionY: CGFloat) {
         self.positionY = positionY
         self.positionX = positionX
     }

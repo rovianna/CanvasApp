@@ -9,8 +9,8 @@
 import UIKit
 
 protocol Geometry {
-    var positionX: Int { get set }
-    var positionY: Int { get set }
+    var positionX: CGFloat { get set }
+    var positionY: CGFloat { get set }
     var object: Form { get }
 }
 

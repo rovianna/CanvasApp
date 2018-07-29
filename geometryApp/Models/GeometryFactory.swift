@@ -9,11 +9,11 @@
 import UIKit
 
 class GeometryFactory {
-    static func getGeometry(form: Form, positionX: Int, positionY: Int) -> Geometry {
+    static func getGeometry(form: Form, positionX: CGFloat, positionY: CGFloat) -> Geometry {
         switch form {
         case .circle: return Circle(positionX: positionX, positionY: positionY)
         case .square: return Square(positionX: positionX, positionY: positionY)
-        case .triangle: return Triangle(positionX: positionX, positionY: position)
+        case .triangle: return Triangle(positionX: positionX, positionY: positionY)
         }
     }
 }
