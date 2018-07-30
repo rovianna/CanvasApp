@@ -11,6 +11,7 @@ import UIKit
 class DraggableImageView: UIImageView {
     
     var dragStartPositionRelativeToCenter: CGPoint?
+    var path: UIBezierPath!
     
     override init(image: UIImage!) {
         super.init(image: image)
@@ -30,6 +31,35 @@ class DraggableImageView: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init coder has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+    }
+    
+    func createRectangle() {
+        path = UIBezierPath()
+        path.move(to: CGPoint(x: 0.0, y: 0.0))
+        
+        path.addLine(to: CGPoint(x: 0.0, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: self.frame.size.height, y: 0.0))
+        
+        path.close()
+    }
+    
+    func createTriangle() {
+        path = UIBezierPath()
+        path.move(to: CGPoint(x: self.frame.width/2, y: 0.0))
+        
+        path.addLine(to: CGPoint(x: 0.0, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
+        
+        path.close()
+    }
+    
+    func createCircle() {
+        path = UIBezierPath(ovalIn: CGRect(x: self.frame.size.width/2 - self.frame.size.height/2, y: 0.0, width: self.frame.size.width, height: self.frame.size.height))
     }
     
     @objc func handlePinch(_ sender: UIPinchGestureRecognizer) {
