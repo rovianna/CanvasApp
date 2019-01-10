@@ -58,8 +58,16 @@ class DraggableImageView: UIImageView {
         path.close()
     }
     
-    func createCircle() {
-        path = UIBezierPath(ovalIn: CGRect(x: self.frame.size.width/2 - self.frame.size.height/2, y: 0.0, width: self.frame.size.width, height: self.frame.size.height))
+    func createCircle() -> CAShapeLayer {
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100,y: 100), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 1.0
+        return shapeLayer
     }
     
     @objc func handlePinch(_ sender: UIPinchGestureRecognizer) {

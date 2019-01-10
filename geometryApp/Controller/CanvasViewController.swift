@@ -22,7 +22,7 @@ class CanvasViewController: UIViewController {
     }
     
     @objc func onClickShowFormAction(_ sender: UITapGestureRecognizer) {
-        let position = sender.location(ofTouch: 0, in: geometryView)
+        let position = sender.location(ofTouch: 0, in: view)
         var geometry: Geometry?
         switch formPicker {
         case .circle: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "smiling-emoticon-square-face"))
@@ -31,11 +31,18 @@ class CanvasViewController: UIViewController {
         }
         
         if let geometry = geometry {
-            let image = DraggableImageView(image: geometry.image)
-            image.frame = CGRect(x: geometry.positionX, y: geometry.positionY, width: 128, height: 128
-            )
-            currentImage.append(image)
-            geometryView.addSubview(image)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100,y: 100), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
+            
+            let shapeLayer = CAShapeLayer()
+            shapeLayer.path = circlePath.cgPath
+            
+            shapeLayer.fillColor = UIColor.clear.cgColor
+            shapeLayer.strokeColor = UIColor.red.cgColor
+            shapeLayer.lineWidth = 1.0
+            let view = UIView()
+            view.layer.addSublayer(shapeLayer)
+            self.view.addSubview(view)
+            view.layer.position = CGPoint(x: position.x, y: position.y)
         }
     }
     

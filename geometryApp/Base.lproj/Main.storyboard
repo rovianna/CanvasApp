@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,27 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-vh-TWG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="0Ry-zn-Rer">
-                                        <rect key="frame" x="36" y="20" width="303" height="10"/>
+                                        <rect key="frame" x="36" y="20" width="303" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm0-FD-Kn3">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
                                                 <state key="normal" title="Círculo"/>
                                                 <connections>
                                                     <action selector="geometryFormPickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAW-6R-764"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebu-0y-A1Y">
-                                                <rect key="frame" x="117" y="0.0" width="69" height="10"/>
+                                                <rect key="frame" x="117" y="0.0" width="69" height="30"/>
                                                 <state key="normal" title="Quadrado"/>
                                                 <connections>
                                                     <action selector="geometryFormPickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBC-WO-yIg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-Sl-PL4">
-                                                <rect key="frame" x="234" y="0.0" width="69" height="10"/>
+                                                <rect key="frame" x="234" y="0.0" width="69" height="30"/>
                                                 <state key="normal" title="Triângulo"/>
                                                 <connections>
                                                     <action selector="geometryFormPickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ks4-Nd-atB"/>
@@ -53,7 +53,6 @@
                                     <constraint firstAttribute="trailing" secondItem="0Ry-zn-Rer" secondAttribute="trailing" constant="36" id="Hch-Ek-8oU"/>
                                     <constraint firstItem="0Ry-zn-Rer" firstAttribute="top" secondItem="EjX-vh-TWG" secondAttribute="top" constant="20" id="fWP-mX-Ohh"/>
                                     <constraint firstAttribute="bottom" secondItem="0Ry-zn-Rer" secondAttribute="bottom" constant="20" id="fZ4-oi-bKH"/>
-                                    <constraint firstAttribute="height" constant="50" id="gqO-Gh-Tmw"/>
                                     <constraint firstItem="0Ry-zn-Rer" firstAttribute="leading" secondItem="EjX-vh-TWG" secondAttribute="leading" constant="36" id="jut-Fs-E4E"/>
                                 </constraints>
                             </view>
@@ -86,12 +85,11 @@
                                     <constraint firstAttribute="trailing" secondItem="1xJ-pD-NTI" secondAttribute="trailing" constant="32" id="0zy-L2-Oyx"/>
                                     <constraint firstItem="1xJ-pD-NTI" firstAttribute="leading" secondItem="naJ-uw-Iu4" secondAttribute="leading" constant="32" id="1DR-GT-EVT"/>
                                     <constraint firstAttribute="bottom" secondItem="1xJ-pD-NTI" secondAttribute="bottom" constant="10" id="VDp-1t-shB"/>
-                                    <constraint firstAttribute="height" constant="50" id="frI-Nj-Jc1"/>
                                     <constraint firstItem="1xJ-pD-NTI" firstAttribute="top" secondItem="naJ-uw-Iu4" secondAttribute="top" constant="10" id="x16-5p-VYj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNg-wK-CpK">
-                                <rect key="frame" x="0.0" y="70" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="527"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
