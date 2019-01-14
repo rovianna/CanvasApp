@@ -18,31 +18,16 @@ class CanvasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        geometryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onClickShowFormAction(_:))))
     }
     
-    @objc func onClickShowFormAction(_ sender: UITapGestureRecognizer) {
-        let position = sender.location(ofTouch: 0, in: view)
-        var geometry: Geometry?
-        switch formPicker {
-        case .circle: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "smiling-emoticon-square-face"))
-        case .square: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "icon"))
-        case .triangle: geometry = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y, image: #imageLiteral(resourceName: "triangle"))
-        }
-        
-        if let geometry = geometry {
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100,y: 100), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
-            
-            let shapeLayer = CAShapeLayer()
-            shapeLayer.path = circlePath.cgPath
-            
-            shapeLayer.fillColor = UIColor.clear.cgColor
-            shapeLayer.strokeColor = UIColor.red.cgColor
-            shapeLayer.lineWidth = 1.0
-            let view = UIView()
-            view.layer.addSublayer(shapeLayer)
-            self.view.addSubview(view)
-            view.layer.position = CGPoint(x: position.x, y: position.y)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let position = touch.location(in: view)
+            switch formPicker {
+            case .circle: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
+            case .square: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
+            case .triangle: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
+            }
         }
     }
     

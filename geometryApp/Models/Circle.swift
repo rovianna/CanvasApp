@@ -9,14 +9,17 @@
 import UIKit
 
 class Circle: Geometry {
-    var positionX: CGFloat
-    var positionY: CGFloat
-    var image: UIImage
-    var object: Form = .circle
-    
-    init(positionX: CGFloat, positionY: CGFloat, image: UIImage) {
-        self.positionX = positionX
-        self.positionY = positionY
-        self.image = image
+   static func drawForm(positionX: CGFloat, positionY: CGFloat) -> CAShapeLayer {
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: positionX, y: positionY), radius: CGFloat(20), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 3.0
+        
+        return shapeLayer
     }
+    
+    var object: Form = .circle
 }

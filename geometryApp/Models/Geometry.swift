@@ -9,10 +9,8 @@
 import UIKit
 
 protocol Geometry {
-    var positionX: CGFloat { get set }
-    var positionY: CGFloat { get set }
-    var image: UIImage { get set }
     var object: Form { get }
+    static func drawForm(positionX: CGFloat, positionY: CGFloat) -> CAShapeLayer
 }
 
 enum Form {

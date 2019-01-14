@@ -9,14 +9,11 @@
 import UIKit
 
 class Square: Geometry {
-    var positionX: CGFloat
-    var positionY: CGFloat
-    var image: UIImage
+    static func drawForm(positionX: CGFloat, positionY: CGFloat) -> CAShapeLayer {
+        return CAShapeLayer()
+    }
+    
     var object: Form = .square
     
-    init(positionX: CGFloat, positionY: CGFloat, image: UIImage) {
-        self.positionY = positionY
-        self.positionX = positionX
-        self.image = image
-    }
+    
 }
