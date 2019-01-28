@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import CoreGraphics
 
 class CanvasViewController: UIViewController {
     
-    var formPicker: Form = .circle
-    
     @IBOutlet weak var geometryView: UIView!
+
+    var formPicker: Form = .circle
+    var createdLayers = [CALayer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,16 @@ class CanvasViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: view)
-            switch formPicker {
-            case .circle: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
-            case .square: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
-            case .triangle: view.layer.addSublayer(GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y))
-            }
+            let layer = GeometryFactory.getGeometry(form: formPicker, positionX: position.x, positionY: position.y)
+            createdLayers.append(layer)
+            view.layer.addSublayer(layer)
         }
     }
     
     @IBAction func removeLastImageAction(_ sender: UIButton) {
-        self.view.layer.sublayers?.popLast()
+        if !createdLayers.isEmpty, let lastCreatedLayer = createdLayers.popLast(), let index = view.layer.sublayers!.firstIndex(of: lastCreatedLayer) {
+            view.layer.sublayers!.remove(at: index)
+        }
     }
     
     
